@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
     s.description = "Generating PlantUML diagrams using PlantUML server hosted anywhere"
     s.authors     = ["Maciej Toporowicz"]
     s.email       = "maciej.toporowicz.it"
-    s.files       = ["lib/jekyll-plantuml-web.rb"]
+    s.files       = `git ls-files | grep lib/`.split("\n")
     s.homepage    =
       "https://rubygems.org/gems/jekyll-plantuml-web"
     s.license       = "MIT"
