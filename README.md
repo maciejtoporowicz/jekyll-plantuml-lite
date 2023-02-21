@@ -10,24 +10,24 @@ gem "jekyll-plantuml-lite"
 
 And then execute:
 
-```
+```sh
 $ bundle
 ```
 
 Or simply do:
-```
+```sh
 $ bundle add jekyll-plantuml-lite
 ```
 
-And then add this line to your site's _config.yml:
+And then add this line to your site's `_config.yml`:
 
-```
+```yaml
 plugins:
   - jekyll-plantuml-lite
 ```
 
 # Usage
-```
+```Liquid
 {% plantuml %}
 @startuml
 Bob -> Alice : hello
