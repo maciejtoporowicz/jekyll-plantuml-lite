@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "../lib/jekyll-plantuml-web"
+require_relative "../lib/jekyll-plantuml-lite"
 require "liquid"
 require 'webmock/minitest'
 
@@ -15,7 +15,7 @@ class HolaTest < Minitest::Test
 
     assert_rendered_result_as_expected_for_requested_markup(
       "<svg>this is a test response</svg>",
-      "{% plantumlweb %}#{File.read("test/data/request.txt")}{% endplantumlweb %}"
+      "{% plantuml %}#{File.read("test/data/request.txt")}{% endplantuml %}"
     )
   end
 

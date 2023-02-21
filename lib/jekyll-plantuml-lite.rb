@@ -6,9 +6,6 @@ module Jekyll
     class JekyllPlantUmlLite < Liquid::Block
         def initialize(tag_name, text, tokens)
             super
-            print "tag name: " + tag_name
-            print "text: " + text
-            print "tokens: " + tokens
         end
 
         def render(context)
