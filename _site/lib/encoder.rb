@@ -1,12 +1,11 @@
 require "zlib"
 
 class Encoder 
-    MAPPING_ARRAY = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
+    MAPPING_ARRAY = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz|_"
     RAW_DEFLATE = -Zlib::MAX_WBITS
     
     def encode(plantuml_content)
-        utf8_content = plantuml_content.strip.encode("UTF-8")
-        compressed = Zlib::Deflate.new(Zlib::BEST_COMPRESSION, RAW_DEFLATE).deflate(utf8_content, Zlib::FINISH)
+        compressed = Zlib::Deflate.new(Zlib::BEST_COMPRESSION, RAW_DEFLATE).deflate(plantuml_content, Zlib::FINISH)
         bytes = compressed.bytes
 
         current_index = 0

@@ -24,7 +24,7 @@ class HolaTest < Minitest::Test
       :get, 
       "https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"
     ).to_return(
-      body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg>this is an invalid response</svg>",
+      body: File.read("test/data/invalid_output.txt"),
       status: 400
     )
 
