@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = "jekyll-plantuml-lite"
-    s.version     = "0.0.2"
+    s.version     = "0.0.3"
     s.summary     = "Generated PlantUML diagrams in Jekyll"
     s.description = "Generating PlantUML diagrams in Jekyll using a PlantUML server."
     s.authors     = ["Maciej Toporowicz"]
